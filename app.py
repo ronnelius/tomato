@@ -5,8 +5,8 @@ import numpy as np
 from detect import detect_objects
 import tempfile
 
-st.set_page_config(page_title="YOLO WebApp", layout="centered")
-st.title("🚀 Tomatoes Object Detection WebApp")
+st.set_page_config(page_title="WebApp", layout="centered")
+st.title("Tomatoes Object Detection WebApp")
 
 # Upload model and image
 model_path = st.text_input("Enter model path:", "my_model.pt")
@@ -34,3 +34,4 @@ if use_webcam:
         frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
         output = detect_objects(frame, model_path)
         st.image(cv2.cvtColor(output, cv2.COLOR_BGR2RGB), caption="Webcam Detection")
+
