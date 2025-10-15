@@ -9,7 +9,7 @@ st.set_page_config(page_title="WebApp", layout="centered")
 st.title("Tomatoes Object Detection WebApp")
 
 # Upload model and image
-model_path = st.text_input("my_model.pt")
+model_path = st.text_input("Enter model", "my_model.pt")
 
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
