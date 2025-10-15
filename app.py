@@ -9,7 +9,7 @@ st.set_page_config(page_title="WebApp", layout="centered")
 st.title("Tomatoes Object Detection WebApp")
 
 # Upload model and image
-model_path = st.text_input("Enter model path:", "my_model.pt")
+#model_path = st.text_input("Enter model path:", "my_model.pt")
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
@@ -34,4 +34,5 @@ if use_webcam:
         frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
         output = detect_objects(frame, model_path)
         st.image(cv2.cvtColor(output, cv2.COLOR_BGR2RGB), caption="Webcam Detection")
+
 
